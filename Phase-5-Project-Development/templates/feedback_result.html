@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Updated Plan{% endblock %}
+{% block content %}
+<div class="card">
+    <div class="success">✅ Your plan has been updated based on your feedback!</div>
+    <h1>Updated Workout Plan</h1>
+    <p><b>User ID:</b> {{ user_id }}</p>
+    <pre class="output">{{ updated_plan }}</pre>
+    <a class="button" href="/">Back to Home</a>
+</div>
+{% endblock %}

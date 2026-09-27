@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}All Users{% endblock %}
+{% block content %}
+<div class="card wide">
+    <h1>📋 FitBuddy - All Users & Workout Plans</h1>
+    {% if users %}
+    <div class="table-wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>User ID</th><th>Name</th><th>Age</th><th>Weight</th>
+            <th>Goal</th><th>Intensity</th><th>Original Plan</th><th>Updated Plan</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.user_id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.weight }}</td>
+            <td>{{ user.goal }}</td>
+            <td>{{ user.intensity }}</td>
+            <td><pre>{{ user.original_plan }}</pre></td>
+            <td><pre>{{ user.updated_plan }}</pre></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% else %}
+    <p>No users have been registered yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

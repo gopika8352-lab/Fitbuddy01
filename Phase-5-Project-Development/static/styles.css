@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #eef7ff, #f8fbff);
+    color: #172033;
+}
+.nav {
+    background: #111827;
+    color: white;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand { font-size: 1.35rem; font-weight: 700; }
+.nav-links { display: flex; gap: 18px; }
+.nav a { color: white; text-decoration: none; }
+.container { max-width: 1180px; margin: 35px auto; padding: 0 18px; }
+.hero { display: flex; justify-content: center; }
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(17, 24, 39, .12);
+    margin-bottom: 25px;
+}
+.form-card { width: min(680px, 100%); }
+.wide { width: 100%; }
+.icon { font-size: 42px; }
+h1 { margin-top: 5px; }
+label { display: block; font-weight: 600; margin-top: 14px; margin-bottom: 7px; }
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5e1;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+button, .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.secondary { background: #374151; margin-left: 8px; }
+.user-box, .tip, .success {
+    padding: 18px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    margin: 15px 0;
+}
+.success { background: #dcfce7; color: #166534; font-weight: 700; }
+.output {
+    white-space: pre-wrap;
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    line-height: 1.55;
+}
+.hero {
+    min-height: 100vh;
+    background-image: url("C:\Users\jegav\Downloads\FitBuddy_AI_Project\static\fit.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #dbe2ea; padding: 10px; vertical-align: top; text-align: left; }
+th { background: #2563eb; color: white; }
+td pre { white-space: pre-wrap; max-width: 500px; }
+footer { text-align: center; padding: 25px; color: #64748b; }
+
+@media (max-width: 700px) {
+    .nav { flex-direction: column; gap: 10px; }
+    .grid { grid-template-columns: 1fr; }
+    .card { padding: 20px; }
+}
